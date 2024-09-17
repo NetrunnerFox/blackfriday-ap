@@ -1,0 +1,314 @@
+:root{
+    --laranja-ap:#FF8006;
+    --branco:#ffffff;
+    --preto:#000000;
+    --cinza:#F5F5F5;
+    --cinza-escuro:#464749;
+    --fonte-texto:'Roboto';
+}
+
+body{
+    font-family: var(--fonte-texto);
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+
+.banner__desktop{
+    display: none;
+}
+
+.banner__mobile__img{
+    width: 100%;
+}
+
+.destaque__titulo{
+    font-size:20px;
+    text-align: center;
+    padding: 0 1em;
+    margin: 1em 0;
+}
+
+.container__destaque{
+    background-color: var(--laranja-ap);
+    margin: 2em;
+    border-radius: 20px;
+    border: 1px solid var(--branco);
+}
+
+.destaque__texto{
+    padding: 1.3em;
+    text-align: center;
+
+}
+
+.escolha__titulo{
+    padding: 0 1em;
+}
+
+.escolha__titulo__container{
+    background-color: var(--laranja-ap);
+    padding: 1em;
+    margin-right: 8em;
+    border-bottom-right-radius: 50px;
+}
+
+.escolha__itemcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.escolha__item{
+    display: grid;
+    grid-template-columns: 2fr, 8fr;
+    grid-template-areas:
+    "img titulo"
+    "img texto";
+    margin: 1em 1.5em;
+    column-gap: 1em;
+    justify-content: flex-start;
+}
+
+.escolha__item__img{
+    grid-area: img;
+    height: 50px;
+}
+
+.escolha__item__titulo{
+    color: var(--laranja-ap);
+    grid-area: titulo;
+}
+
+.escolha__item__texto{
+    grid-area: texto;
+}
+
+.vantagens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vantagens__box{
+    border: solid var(--branco) 1px;
+    margin: 1.5em;
+    padding: 1.5em;
+}
+
+.vantagens__titulo{
+    font-size: 20px;
+    margin: 0 2em;
+    text-align: center;
+}
+
+.vantagens__content{
+    list-style: circle;
+}
+
+.vantagens__content__item{
+    margin: 1em 2em;
+}
+
+.vantagens__botao{
+    background-color: var(--laranja-ap);
+    text-align: center;
+    color: var(--branco);
+    padding: 0.5em 1em;
+    margin:2em 1em;
+    border-radius: 20px;
+    width: 40%;
+    text-decoration: none;
+    margin: 0 0 2em;
+    transition: 0.5s;
+    align-self: center;
+}
+
+.vantagens__botao:hover{
+    background-color: #aa4501;
+}
+
+.parceiros{
+    background-color: var(--laranja-ap);
+    padding: 1em 0;
+}
+
+.parceiros__titulo{
+    font-size: 20px;
+    text-align: center;
+    margin: 1em;
+}
+
+.parceiros__container{
+    background-color: var(--branco);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em;
+    margin: 1em;
+}
+
+.parceiros__img{
+    height: 25px;
+    margin: 1em;
+}
+
+
+.rodape{
+    color: var(--branco);
+    padding: 1em;
+}
+
+.rodape__titulo{
+    margin:1.5em;
+    text-align: center;
+    font-size: 15px;
+}
+
+.rodape__container{
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns:2fr 2fr ;
+    grid-template-areas: 
+    "logoap  texto"
+    "direitos  logos";
+    row-gap: 0.2em;
+    column-gap: 2em;
+    justify-content: space-between;
+}
+
+.logobox{
+    display: flex;
+    justify-content: space-between;
+}
+.rodape__container__logoap{
+    height: 20px;
+    grid-area: logoap;
+}
+
+.rodape__container__direitos{
+    font-size: 12px;
+    grid-area: direitos;
+}
+
+.rodape__container__redestexto{
+    font-size: 12px;
+    grid-area: texto;
+}
+
+.rodape__container__logorede{
+    height: 20px;
+}
+
+.rodape__container__logorede{
+    grid-area: logos;
+}
+
+@media screen and (min-width: 1024px){
+    .banner__mobile{
+        display: none;
+    }
+
+    .banner__desktop{
+        display: contents;
+    }
+
+    .banner__desktop__img{
+        width: 100%;
+    }
+
+    .destaque{
+        margin: 4em 2em;
+    }
+
+    .destaque__titulo{
+        font-size: 32px;
+        padding: 0 2em;
+    }
+
+    .container__destaque{
+        margin: 2em 4em;
+        padding:2em;
+
+    }
+
+    .destaque__texto{
+        font-size: 28px;
+    }
+
+    .escolha__titulo{
+        font-size: 28px;
+    }
+
+    .escolha__titulo__container{
+        margin-right: 30em;
+    }
+
+    .escolha__itemcontainer{
+        margin: 3em 6em;
+    }
+
+    .escolha__item{
+        justify-content: flex-start;
+    }
+
+    .escolha__item__titulo{
+        font-size: 20px;
+    }
+
+    .escolha__item__texto{
+        font-size: 18px;
+    }
+
+    .vantagens__box{
+        margin: 2em 4em;
+    }
+
+    .vantagens__titulo{
+        font-size: 32px;
+        margin: 1em 4em;
+    }
+
+    .vantagens__content__item{
+        font-size: 24px;
+        margin: 2em;
+    }
+
+    .vantagens__botao{
+        font-size: 28px;
+        padding: 0.5em;
+    }
+
+    .parceiros__titulo{
+        font-size: 28px;
+        margin: 0.5em;
+    }
+
+    .parceiros__container{
+        margin: 2em 6em;
+    }
+
+    .parceiros__img{
+        height: 60px;
+        margin: 2em;
+    }
+    .rodape__titulo{
+        font-size: 20px;
+    }
+
+    .rodape__container{
+        column-gap: 1em;
+        margin:1em 15em;
+    }
+
+    .rodape__container__logoap{
+     height: 50px;   
+    }
+
+    .rodape__container__redestexto{
+        align-self: flex-end;
+        font-size: 15px;
+        padding: 1em 0;
+    }
+}
